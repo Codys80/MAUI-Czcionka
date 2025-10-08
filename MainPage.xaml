@@ -6,23 +6,42 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="25">
+            Spacing="25"
+            Margin="20"
+            >
 
             <Label 
                 Text="Właściwości czcionki"
                 FontSize="32"
                 FontAttributes="Bold"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" 
+                TextColor="White"
+                BackgroundColor="#558B2F"/>
             <Label 
-                Text="Właściwości czcionki"
-                FontSize="32"
-                FontAttributes="Bold"
+                Text="Rozmiar: "
+                FontSize="Medium"
+                HorizontalOptions="Center" 
+                x:Name="fontSizeDisplay"/>
+            <Slider 
+                x:Name="fontSlider"
+                Minimum="0"
+                Maximum="40"
+                ValueChanged="OnFontSliderChange"
+                Value="0" />
+            <Label 
+                Text="Dzień dobry"
+                FontSize="Medium"
+                x:Name="messageDisplay"
                 HorizontalOptions="Center" />
             <Button 
                 Text=">>"
+                x:Name="displayButton"
+                Clicked="OnDisplayButtonClicked"
                 FontSize="20"
                 FontAttributes="Italic"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                BackgroundColor="#558B2F"
+                TextColor="White"/>
         </VerticalStackLayout>
     </ScrollView>
 
